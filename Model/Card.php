@@ -88,8 +88,8 @@ class Card extends \Magento\Payment\Model\Method\AbstractMethod
             $resource,
             $resourceCollection,
             $data);
-        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/expresspay_card.log');
-        $this->_logger = new \Zend\Log\Logger();
+        $writer = new \Zend_Log_Writer_Stream(BP . '/var/log/expresspay_card.log');
+        $this->_logger = new \Zend_Log();
         $this->_logger->addWriter($writer);
         $this->_gateUrl = 'https://api.express-pay.by/v1/web_cardinvoices';
     }
